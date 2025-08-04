@@ -28,7 +28,7 @@ class MyEventEmitter {
     }
 
     this.listeners[event] = this.listeners[event].filter(
-      (lis) => lis !== listener && listener.originalListener !== listener,
+      (lis) => lis !== listener && lis.originalListener !== listener,
     );
   }
 
